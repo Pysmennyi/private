@@ -1,4 +1,3 @@
-
 let email_input = prompt(`please enter the email: `);
 let user =`user@gmail.com`;
 let admin = `admin@gmail.com`;
