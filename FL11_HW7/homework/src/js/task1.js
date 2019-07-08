@@ -14,15 +14,15 @@ if (!email_input){
     const password_input = prompt(`Please enter the password: `);
     if (!password_input){
         alert(`Canceled`);
-    }else if((email_input === user && password_input === user_password) ||
-        (email_input === admin && password_input === admin_password)) {
+    }else if(email_input === user && password_input === user_password ||
+        email_input === admin && password_input === admin_password) {
         const confirm_pass = confirm(`Do you want to change your password?`);
      if (!confirm_pass) {
         alert(`You have failed the change.`);
     }else if(confirm_pass){
          const ask_old_pass = prompt(`write the old password: `);
-         if((email_input === user && ask_old_pass === user_password) ||
-             (email_input === admin && ask_old_pass === admin_password)) {
+         if(email_input === user && ask_old_pass === user_password ||
+             email_input === admin && ask_old_pass === admin_password) {
      const new_pass = prompt(`enter the new password: `);
      if (new_pass.length<length_2){
          alert(`It’s too short password. Sorry.`);
