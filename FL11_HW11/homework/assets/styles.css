@@ -24,7 +24,7 @@ header {
 header h1 {
     text-align: center;
     margin: 20px 0px;
-    color: #00B4FA;
+    color: #44B4F8;
 }
 .overTask {
     text-align: center;
@@ -85,14 +85,14 @@ header h1 {
     align-items: center;
     height: 25px;
 }
-.input_check_ {
+.input_check {
     position: relative;
     width: 0px;
     height: 0px;
     margin-left: 25px;
     margin-right: 8px;
 }
-.input_check_:before {
+.input_check:before {
     content: '';
     position: absolute;
     height: 20px;
@@ -102,7 +102,7 @@ header h1 {
     top: -12px;
     left: -25px;
 }
-.input_check_:after {
+.input_check:after {
     content: '\2713';
     position: absolute;
     left: -21px;
@@ -111,21 +111,21 @@ header h1 {
     color: #aaa;
     opacity: 0;
 }
-.input_check_:checked:after {
+.input_check:checked:after {
     opacity: 1;
 }
 .value {
-    color: #00B4FA;
+    color: #44B4F8;
     font-size: 18px;
 }
-.edit__button {
+.editButton {
     background-color: transparent;
     border: none;
     margin-left: 10px;
     cursor: pointer;
 }
-.edit__button .material-icons {
-    color: #7FC3F1;
+.editButton .material-icons {
+    color: #8AC4F4;
     font-size: 28px;
 }
 .delete {
@@ -136,7 +136,7 @@ header h1 {
 }
 .delete .material-icons{
     font-size: 28px;
-    color: #7FC3F1;
+    color: #8AC4F4;
 }
 ._edited_save_div {
     display: flex;
@@ -158,5 +158,5 @@ header h1 {
 }
 .editSaveButton .material-icons {
     font-size: 28px;
-    color: #7FC3F1;
+    color: #8AC4F4;
 }

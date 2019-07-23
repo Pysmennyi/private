@@ -17,7 +17,7 @@ function addNewTask (){
             document.querySelector(`.delete_edit_div`).insertBefore(addEditTask,
                 document.querySelector(`.delete_edit_div`).firstChild);
             let addInputCheckTask = document.createElement(`input`);
-            addInputCheckTask.className = `input_check_`;
+            addInputCheckTask.className = `input_check`;
             addInputCheckTask.type = `checkbox`;
             document.querySelector(`.edit_`).insertBefore(addInputCheckTask,
                 document.querySelector(`.edit_`).firstChild);
@@ -26,13 +26,13 @@ function addNewTask (){
             addTaskValue.innerHTML = document.querySelector(`.addAction`).value;
             document.querySelector(`.edit_`).appendChild(addTaskValue);
             let addEditTaskbutton = document.createElement(`button`);
-            addEditTaskbutton.className = `edit__button`;
+            addEditTaskbutton.className = `editButton`;
             document.querySelector(`.edit_`).appendChild(addEditTaskbutton);
             let addMaterialIcons = document.createElement(`i`);
             addMaterialIcons.className = `material-icons`;
             addMaterialIcons.innerHTML = `create`;
-            document.querySelector(`.edit__button`).insertBefore(addMaterialIcons,
-                document.querySelector(`.edit__button`).firstChild);
+            document.querySelector(`.editButton`).insertBefore(addMaterialIcons,
+                document.querySelector(`.editButton`).firstChild);
             let addDelTask = document.createElement(`button`);
             addDelTask.className = `delete`;
             document.querySelector(`.delete_edit_div`).appendChild(addDelTask);
@@ -46,13 +46,13 @@ function addNewTask (){
     } else {
         let addToMuchTasks = document.createElement(`h2`);
         addToMuchTasks.className = `overTask`;
-        addToMuchTasks.innerHTML = `Maximum item per list are created`;
+        addToMuchTasks.innerHTML = `You reach the maximum for this time!`;
         document.querySelector(`header`).insertBefore(addToMuchTasks, document.querySelector(`header`).firstChild )
     }
 }
 addAction.addEventListener(`click`, addNewTask);
 function editFunc(event) {
-    if ( event.target.parentNode.className === `edit__button` &&
+    if ( event.target.parentNode.className === `editButton` &&
         event.target.closest(`.section_div`).querySelectorAll(`.changeInput`).length < 1) {
         let addTaskEditedSaveDiv = document.createElement(`div`);
         addTaskEditedSaveDiv.className = `saveEdited`;
@@ -90,7 +90,7 @@ function deleteTask (event) {
 }
 sectionTasks.addEventListener(`click`, deleteTask);
 function disable_check_box (event) {
-    let inputCheckTask = document.querySelector(`.input_check_`);
+    let inputCheckTask = document.querySelector(`.input_check`);
     if (event.target === inputCheckTask) {
         if (event.target.checked) {
             event.target.setAttribute(`disabled`, `disabled`)
